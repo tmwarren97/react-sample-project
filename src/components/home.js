@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='home-field'>
-        <label>User Name</label>
+        <label>User Name:</label>
         <input
           type='text'
           name='username'
@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       
       <div className='home-field'>
-        <label>Location</label>
+        <label>Location:</label>
         <select value='Location'>
           <option value="New York">New York</option>
           <option value="San Francisco">San Francisco</option>

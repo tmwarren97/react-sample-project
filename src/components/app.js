@@ -1,8 +1,10 @@
 import React, { lazy } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+import Home from './home';
+import About from './about';
 
-const Home = lazy(() => import('./Home'));
-const About = lazy(() => import('./About'));
+// const Home = lazy(() => import('./Home'));
+// const About = lazy(() => import('./About'));
 
 const App = (props) => {
   const { path } = props.match;

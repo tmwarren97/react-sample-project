@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import App from "./components/app";
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import App from "./components/app";
+
 import './style.less';
 
 const routes = (

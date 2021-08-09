@@ -6,11 +6,12 @@ module.exports = {
   entry: './src/index.js',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    static: path.join(__dirname, 'dist'),
     proxy: {
       '/sample': 'http://localhost:3000',
     },
     hot: true,
+    historyApiFallback: true,
   },
   output: {
     filename: 'bundle.[hash].js',
