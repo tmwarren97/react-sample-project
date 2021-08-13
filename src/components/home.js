@@ -13,10 +13,10 @@ const Home = () => {
     axios
       .post('/userInfo', payload)
       .then(res => {
-        setMessage({ ...message, ...{ isError: false, message: res.data.success }});
+        setMessage({});
       })
       .catch(err => {
-        setMessage({ ...message, ...{ isError: true, message: err.response.data.error }});
+        setMessage({});
       });
   };
 
@@ -28,7 +28,7 @@ const Home = () => {
           type='text'
           name='userName'
           value={userName}
-          onChange={e => setPayload({ ...payload, userName : e.target.value })}
+          onChange={setPayload({})}
         />
         <span>{userName}</span>
       </div>
@@ -39,14 +39,14 @@ const Home = () => {
           type='text'
           name='age'
           value={age}
-          onChange={e => setPayload({ ...payload, age : e.target.value })}
+          onChange={setPayload({})}
         />
         <span>{age}</span>
       </div>
       
       <div className='home-field'>
         <label>Location:</label>
-        <select name='location' value={location} onChange={e => setPayload({ ...payload, location : e.target.value })}>
+        <select name='location' value={location} onChange={setPayload({})}>
           <option value="">---</option>
           <option value="New York">New York</option>
           <option value="San Francisco">San Francisco</option>
@@ -57,7 +57,7 @@ const Home = () => {
 
       <div className='home-field'>
         <button type="button" onClick={submitHandler}>Submit</button>
-        <span className={`message-holder ${message.isError ? 'error' : 'success'}`}>{message.message}</span>
+        <span className={`message-holder error`}>{message.message}</span>
       </div>
     </div>
   );
