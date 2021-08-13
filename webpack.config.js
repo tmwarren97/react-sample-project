@@ -8,7 +8,7 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, 'dist'),
     proxy: {
-      '/sample': 'http://localhost:3000',
+      '/userInfo': 'http://localhost:3000',
     },
     hot: true,
     historyApiFallback: true,

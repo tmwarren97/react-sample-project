@@ -1,0 +1,56 @@
+#root {
+  width: 80%;
+  margin: 30px auto;
+  color: #333;
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    .link {
+      width: 60px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+
+  .home-field {
+    margin-bottom: 15px;
+
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+
+    input, select {
+      width: 200px;
+      margin-right: 25px;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #999;
+      margin-top: 10px;
+    }
+
+    .message-holder {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .success {
+      color: #008cffe0;
+    }
+
+    .error {
+      color: red;
+    }
+  }
+}

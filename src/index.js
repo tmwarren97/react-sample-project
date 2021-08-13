@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import App from "./components/app";
 
-import './style.less';
+import './assets/style.less';
 
 const routes = (
   <Router>

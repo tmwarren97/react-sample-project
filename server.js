@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/sample', (req, res) => {
-  res.send('Response')
+app.post('/userInfo', (req, res) => {
+  // res.json({ success: 'Successfully submitted.' });
+  res.status(404).json({ error: 'Failed to'});
+  res.end();
 })
 
 app.listen(port, function () {
